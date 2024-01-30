@@ -4,25 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>TodoMVC</title>
   </head>
   <body>
-    <div id="app">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <span id="hearts"></span>
-      <a href="https://www.typescriptlang.org/" target="_blank">
-        <img src="./src/typescript.svg" class="logo vanilla" alt="TypeScript logo" />
-      </a>
-      <h1>Vite + TypeScript</h1>
-      <div class="card">
-        <button id="counter" type="button"></button>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and TypeScript logos to learn more
-      </p>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" defer src="/src/main.ts"></script>
+    
+    <h1 class="page-header">todos</h1>
+    <section class="main-section">
+      <section class="input-section">
+        <i class="input-section__icon js-alldone-mark">⬇️</i> 
+        <input class="input-section__input js-input" placeholder="What needs to be done?" />
+      </section>
+      <ul class="list-section">
+        <li class="list-section--item">
+          <i class="list-section--item--check-mark">&check;</i>
+          <div class="list-section--item--text">12312312</div>
+          <div class="list-section--item--del-mark">x</div>
+        </li>
+        <li class="list-section--item list-section--item__done">
+          <i class="list-section--item--check-mark">&check;</i>
+          <div class="list-section--item--text">12312312</div>
+          <div class="list-section--item--del-mark">x</div>
+        </li>
+        <li class="list-section--item list-section--item__editing">
+          <i class="list-section--item--check-mark">&check;</i>
+          <div class="list-section--item--text">12312312</div>
+          <input class="list-section--item--input" />
+          <div class="list-section--item--del-mark">x</div>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
